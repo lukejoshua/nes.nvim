@@ -373,8 +373,8 @@ function M.setup(opts)
 	-- setup highlights
 	local diff_add = vim.api.nvim_get_hl(0, { name = "@diff.plus", link = false })
 	local diff_del = vim.api.nvim_get_hl(0, { name = "@diff.minus", link = false })
-	vim.api.nvim_set_hl(0, "NesAdd", { bg = string.format("#%x", diff_add.fg), default = true })
-	vim.api.nvim_set_hl(0, "NesDelete", { bg = string.format("#%x", diff_del.fg), default = true })
+	vim.api.nvim_set_hl(0, "NesAdd", { bg = string.format("#%x", diff_add.bg), default = true })
+	vim.api.nvim_set_hl(0, "NesDelete", { bg = string.format("#%x", diff_del.bg), default = true })
 end
 
 return M
